@@ -10,7 +10,7 @@ export default function Home() {
         Toy-Robot 
       </h1>
       <p className="mb-6 max-w-xl text-sm text-slate-300">
-        Our mission was clear: take a game with almost finished mechanics and shape it with our own design. After some time—and a lot of caffeine—here we are.</p>
+        Our mission was clear: take a game with almost finished mechanics and shape it with our own design. After some time—and a lot of caffeine—here we are. If you like it, please feel free to visit my Github profile clicking on the name in the footer. Have some fun!</p>
       <Link
         to="/game"
         className="rounded bg-orange-500 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-orange-600"
