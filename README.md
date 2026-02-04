@@ -1,16 +1,22 @@
-# React + Vite
+# R.O.V.E.R. simulator 🚀 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Operate a R.O.V.E.R. over the Mars surface to collaborate with NASA in obtaining precious information about the martian land and deploy walls to help in the scientific research. Hope you enjoy it!
 
-Currently, two official plugins are available:
+## The concept 🎆
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The idea was quite simple: we had worked on a technical trial during our design class on DAW. After almost finishing the mechanics, our teacher Paloma invited us to make the final adjusts on our own. Each one of us had to wake up this toy-robot with our own spark. So my approach has been to recreate the R.O.V.E.R. landing on Mars. Hope you like it
 
-## React Compiler
+## The stack 🔑
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+This project is entirely made combining React, Tailwind, PostCSS and Vite
 
-## Expanding the ESLint configuration
+## The work 🔨
+FALTAN FOTOS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## The future 💅 
+
+Possible features to think on:
+- Create a adaptative board.
+- Work on the accesibility of the project.
+- Implement a gaming competitive mechanic.
