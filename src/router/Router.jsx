@@ -7,14 +7,14 @@ function RootLayout({ children }) {
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
       <header className="border-b border-slate-800">
         <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
-          <span className="text-sm font-semibold tracking-tight">
+          <span className="text-sm font-semibold tracking-tight text-orange-400">
             Toy Robot Game
           </span>
-          <div className="flex gap-4 text-sm">
-            <a href="/" className="hover:text-orange-400">
+          <div className="flex gap-4 text-sm text-orange-400">
+            <a href="/" className="hover:text-orange-600">
               Home
             </a>
-            <a href="/game" className="hover:text-orange-400">
+            <a href="/game" className="hover:text-orange-600">
               Game
             </a>
           </div>

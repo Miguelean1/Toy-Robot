@@ -26,7 +26,7 @@ export default function Game() {
 
   const showSuccess = (message) => {
     Swal.fire({
-      title: '✓ Mission Update',
+      title: '✓ Succesful landing',
       text: message,
       icon: 'success',
       confirmButtonText: 'Continue',
@@ -54,7 +54,7 @@ export default function Game() {
           !facing ||
           !DIRECTIONS.includes(facing)
         ) {
-          showError('PLACE_ROBOT requires: row,col,facing (NORTH/EAST/SOUTH/WEST).')
+          showError('PLACE_ROBOT requires one of the next directions: NORTH/EAST/SOUTH/WEST.')
           return
         }
 
@@ -81,7 +81,7 @@ export default function Game() {
         }
 
         if (robot && robot.row === wRow && robot.col === wCol) {
-          showError('Cannot place obstacle on rover position.')
+          showError('Cannot place obstacle on R.O.V.E.R. position.')
           return
         }
 
@@ -96,7 +96,7 @@ export default function Game() {
       }
       case 'MOVE': {
         if (!robot) {
-          showError('Deploy the rover before navigation.')
+          showError('Deploy the R.O.V.E.R before navigation.')
           return
         }
 
@@ -120,7 +120,7 @@ export default function Game() {
         }
 
         if (walls.some((w) => w.row === newRow && w.col === newCol)) {
-          showError('Obstacle detected. Rover cannot proceed.')
+          showError('Obstacle detected. R.O.V.E.R. cannot proceed.')
           return
         }
 
@@ -129,7 +129,7 @@ export default function Game() {
       }
       case 'LEFT': {
         if (!robot) {
-          showError('Deploy the rover first.')
+          showError('Deploy the R.O.V.E.R. first.')
           return
         }
         const index = DIRECTIONS.indexOf(robot.facing)
@@ -141,7 +141,7 @@ export default function Game() {
       }
       case 'RIGHT': {
         if (!robot) {
-          showError('Deploy the rover first.')
+          showError('Deploy the R.O.V.E.R. first.')
           return
         }
         const index = DIRECTIONS.indexOf(robot.facing)
@@ -153,7 +153,7 @@ export default function Game() {
       }
       case 'REPORT': {
         if (!robot) {
-          showError('Deploy the rover before requesting telemetry.')
+          showError('Deploy the R.O.V.E.R before requesting telemetry.')
           return
         }
         const value = `${robot.row},${robot.col},${robot.facing}`
@@ -179,7 +179,7 @@ export default function Game() {
                 MARS R.O.V.E.R. CONTROL
               </h1>
               <p className="text-xs font-mono text-orange-300/70">
-                Mission Sol 2847 // Terrain Mapping Active
+                2031.Aug.12. // Side of Olympus mountain
               </p>
             </div>
           </div>
@@ -229,30 +229,30 @@ export default function Game() {
             
             <div className="rounded-lg border border-orange-800/50 bg-stone-950/60 p-4 backdrop-blur">
               <h3 className="mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-orange-400">
-                 Available Commands
+                 Briefing (available commands)
               </h3>
               <div className="space-y-2 font-mono text-xs text-orange-200/80">
-                <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30">
-                  <span className="text-orange-400 font-semibold">PLACE_ROBOT</span> X,Y,DIR
+                <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30 ">
+                  <span className="text-orange-400 font-semibold">PLACE_ROBOT X,Y,DIR </span> to land your R.O.V.E.R. on the board
                   <div className="text-orange-300/60 text-[10px] mt-1">
-                    DIR: NORTH, EAST, SOUTH, WEST
+                    DIR = NORTH or EAST or SOUTH or WEST
                   </div>
                 </div>
-                <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30">
-                  <span className="text-orange-400 font-semibold">PLACE_WALL</span> X,Y
+                <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30 ">
+                  <span className="text-orange-400 font-semibold">PLACE_WALL X,Y</span> to set an obstacle on the board
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30">
-                    <span className="text-orange-400 font-semibold">MOVE</span>
+                    <span className="text-orange-400 font-semibold">MOVE</span> to advance one square on the faced direction
                   </div>
                   <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30">
-                    <span className="text-orange-400 font-semibold">REPORT</span>
+                    <span className="text-orange-400 font-semibold">REPORT</span> to generate a report of the current situation
                   </div>
                   <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30">
-                    <span className="text-orange-400 font-semibold">LEFT</span>
+                    <span className="text-orange-400 font-semibold">LEFT</span> to rotate 90 degrees to the left
                   </div>
                   <div className="rounded bg-stone-900/50 p-2 border border-orange-900/30">
-                    <span className="text-orange-400 font-semibold">RIGHT</span>
+                    <span className="text-orange-400 font-semibold">RIGHT</span> to rotate 90 degrees to the right
                   </div>
                 </div>
               </div>
