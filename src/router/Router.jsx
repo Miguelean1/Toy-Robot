@@ -1,0 +1,52 @@
+import { createBrowserRouter } from 'react-router-dom'
+import Home from '../views/Home'
+import Game from '../views/Game'
+
+function RootLayout({ children }) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+      <header className="border-b border-slate-800">
+        <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+          <span className="text-sm font-semibold tracking-tight">
+            Toy Robot Game
+          </span>
+          <div className="flex gap-4 text-sm">
+            <a href="/" className="hover:text-emerald-400">
+              Home
+            </a>
+            <a href="/game" className="hover:text-emerald-400">
+              Game
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      <main className="flex-1">
+        {children}
+      </main>
+
+      <footer className="border-t border-slate-800 py-3 text-center text-xs text-slate-500">
+        Built by Mike
+      </footer>
+    </div>
+  )
+}
+
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <RootLayout>
+        <Home />
+      </RootLayout>
+    ),
+  },
+  {
+    path: '/game',
+    element: (
+      <RootLayout>
+        <Game />
+      </RootLayout>
+    ),
+  },
+])
