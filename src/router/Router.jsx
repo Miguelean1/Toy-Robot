@@ -1,6 +1,6 @@
-import { createBrowserRouter } from 'react-router-dom'
-import Home from '../views/Home'
-import Game from '../views/Game'
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../views/Home";
+import Game from "../views/Game";
 
 function RootLayout({ children }) {
   return (
@@ -11,30 +11,41 @@ function RootLayout({ children }) {
             Toy Robot Game
           </span>
           <div className="flex gap-4 text-sm">
-            <a href="/" className="hover:text-emerald-400">
+            <a href="/" className="hover:text-orange-400">
               Home
             </a>
-            <a href="/game" className="hover:text-emerald-400">
+            <a href="/game" className="hover:text-orange-400">
               Game
             </a>
           </div>
         </nav>
       </header>
 
-      <main className="flex-1">
-        {children}
-      </main>
+      <main className="flex-1">{children}</main>
 
-      <footer className="border-t border-slate-800 py-3 text-center text-xs text-slate-500">
-        Built by Mike
+      <footer className="border-t border-slate-800 py-3 text-center text-s text-slate-500">
+        Developed by{" "}
+        <a
+          href="https://github.com/Miguelean1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+      text-orange-400
+      text-shadow-neon
+      transition
+      hover:text-orange-300
+    "
+        >
+          MIKE
+        </a>
       </footer>
     </div>
-  )
+  );
 }
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: (
       <RootLayout>
         <Home />
@@ -42,11 +53,11 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: '/game',
+    path: "/game",
     element: (
       <RootLayout>
         <Game />
       </RootLayout>
     ),
   },
-])
+]);
